@@ -5,12 +5,20 @@ import ExpensesFilter from "./ExpensesFilter";
 import React, { useState } from "react";
 
 const Expenses = (props) => {
-  const [filteredYear, setFilteredYear] = useState("2021");
+  const [filteredYear, setFilteredYear] = useState("Show All");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
     console.log(selectedYear);
   };
+
+  const filteredExpenses = props.items.filter((expense) => {
+    if (filteredYear !== "Show All") {
+      return expense.date.getFullYear().toString() === filteredYear;
+    } else {
+      return true;
+    }
+  });
 
   return (
     <div>
@@ -21,7 +29,7 @@ const Expenses = (props) => {
         />
         {/*x = items & x.title = items.title */
         /*expense can be named whatever we want in this case*/}
-        {props.items.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem
             key={expense.id}
             title={expense.title}
