@@ -18,18 +18,21 @@ function ExpenseForm() {
     setEnteredDate(event.target.value);
   };
 
-  const inputChangeHandler = (identifier, value) => {
-    if (identifier === "title") {
-      setEnteredTitle(value);
-    } else if (identifier === "date") {
-      setEnteredDate(value);
-    } else {
-      setEnteredAmount(value);
-    }
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const expenseData = {
+      //we collect the data in this object
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+
+    console.log(expenseData);
   };
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
