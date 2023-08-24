@@ -20,9 +20,10 @@ const ExpenseItem = (props) => {
       {/*date={props.date} we can name 'date' whatever we want*/}
       <div className="expense-item__description">
         <h2>{title}</h2>
+        {/*We can use title here other than props.title because we added key to each item.*/}
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Tıtle</button>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 };
