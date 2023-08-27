@@ -33,13 +33,31 @@ const DUMMY_EXPENSES = [
     id: "e6",
     title: "Mobile Phone",
     amount: 999.99,
-    date: new Date(2023, 3, 22),
+    date: new Date(2023, 4, 22),
   },
   {
     id: "e7",
     title: "Chair (Metal)",
     amount: 25.99,
     date: new Date(2023, 8, 10),
+  },
+  {
+    id: "e8",
+    title: "Wardrope",
+    amount: 550.5,
+    date: new Date(2023, 5, 15),
+  },
+  {
+    id: "e9",
+    title: "Door (Wooden)",
+    amount: 200.5,
+    date: new Date(2023, 2, 22),
+  },
+  {
+    id: "e10",
+    title: "Jacket",
+    amount: 150,
+    date: new Date(2023, 7, 10),
   },
 ];
 
