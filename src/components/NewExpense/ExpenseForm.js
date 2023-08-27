@@ -24,7 +24,7 @@ function ExpenseForm(props) {
     const expenseData = {
       //we collect the data in this object
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -73,9 +73,7 @@ function ExpenseForm(props) {
           Close
         </button>
 
-        <button onClick={props.onClose} type="submit">
-          Add Expense
-        </button>
+        <button type="submit">Add Expense</button>
       </div>
     </form>
   );

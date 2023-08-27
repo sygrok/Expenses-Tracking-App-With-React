@@ -9,10 +9,10 @@ const ExpenseItem = (props) => {
     /*first element is the current state value and the second one is the function to update it*/
   }
 
-  const clickHandler = () => {
-    setTitle("Updated!");
-    console.log("clicked");
-  };
+  // const clickHandler = () => {
+  //   setTitle("Updated!");
+  //   console.log("clicked");
+  // };
 
   return (
     <li>
@@ -24,7 +24,7 @@ const ExpenseItem = (props) => {
           {/*We can use title here other than props.title because we added key to each item.*/}
           <div className="expense-item__price">${props.amount}</div>
         </div>
-        <button onClick={clickHandler}>Change Title</button>
+        {/* <button onClick={clickHandler}>Change Title</button> */}
       </Card>
     </li>
   );

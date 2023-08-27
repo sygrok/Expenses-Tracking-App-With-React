@@ -8,10 +8,17 @@ const ExpensesFilter = (props) => {
     // console.log(event.target.value);
   };
 
+  let check = props.onCheck;
+  let labelContent = "Filter by year";
+
+  if (check === false) {
+    labelContent = "";
+  }
+
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
-        <label>Filter by year</label>
+        <label>{labelContent}</label>
         <select value={props.selected} onChange={dropdownChangeHandler}>
           <option value="Show All">Show All</option>
           <option value="2024">2024</option>
