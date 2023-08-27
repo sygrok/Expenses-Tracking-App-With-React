@@ -1,6 +1,7 @@
 # Expense List App
 
-This project contains an Expense List application developed in the first section of my React course. This application is designed to help users track their daily expenses.
+This project contains an Expense List application developed in the first section of my React course. This application is designed to help users track their daily expenses. <br> <br>
+Direct link to project: https://sygrok.github.io/Expenses-Tracking-App-With-React/
 
 ## Features
 
@@ -20,6 +21,7 @@ This project contains an Expense List application developed in the first section
 3. Use the command `npm install` to install the dependencies.
 4. Use the command `npm start` to start the application.
 5. Go to `http://localhost:3000` in your browser.
+
 
 
 
